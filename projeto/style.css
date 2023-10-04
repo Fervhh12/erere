@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+    
+/*===== VARIABLES CSS =====*/
+:root {
+  --dark-color-lighten: #f2f5ff;
+  --red-card: #a62121;
+  --blue-card: #4be698;
+  --btn: #141414;
+  --btn-hover: #3a3a3a;
+  --text: #fbf7f7;
+}
+
+/*===== RESET =====*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--dark-color-lighten);
+  font-family: "Montserrat", sans-serif;
+}
+body::after {
+  content: "";
+  position: absolute; /* Torna a imagem fixa na tela enquanto você rola */
+  top: 0;
+  left: 0;
+  width: 1320px;
+  height: 1080px;
+  background: url('Artboard_74_novo.png'); /* Verifique o caminho da imagem */
+  background-size: cover;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.content-right {
+  /* Certifique-se de que o conteúdo não seja oculto pela imagem de fundo */
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
+
+button {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+/*===== CARD =====*/
+/* ... Seus estilos existentes ... */
+
+.container {
+height: 90%;
+width: 90%; /* Reduzi o tamanho total da largura para que os cartões tenham mais espaço entre eles */
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+gap: 20px; /* Adicionei um espaçamento entre os cartões */
+}
+
+.card {
+align-items: center;
+bottom: 60px;
+position: relative;
+padding: 1rem;
+width: 350px;
+height: 400px; /* Reduzi a altura dos cartões */
+box-shadow: -1px 15px 30px -12px rgb(32, 32, 32);
+border-radius: 0.9rem;
+background-color: #93a97c;
+color: var(--text);
+cursor: pointer;
+}
+
+.card-blue {
+  background-color: #93a97c;
+
+}
+
+.product-image {
+height:50%;
+width: 80%;
+transform: scale(1);
+transition: transform 500ms ease-in-out;
+filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+}
+
+/* ... Seus estilos existentes ... */
+
+
+.card:hover .product-image {
+transform: scale(1.1);
+}
+.product-info {
+  text-align: center;
+}
+
+.card:hover .product-image {
+    transform: scale(1.1);    }
+
+.product-info h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.product-info p {
+  margin: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.price {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.btn {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+.buy-btn {
+  color: inherit;
+  text-decoration: none;
+  background-color: var(--btn);
+  padding: 0.6rem 3.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 300ms ease;
+}
+.buy-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+
+
+@media screen and (max-width: 800px) {
+  body {
+    height: auto;
+  }
+  .container {
+    padding: 2rem 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-item img {
+  max-width: 100%;
+  margin: 0 auto; /* centraliza a imagem */
+}
+
+.card .btn-primary {
+  background: linear-gradient(to right, #5b8050, #88a378);
+  border: none;
+  color: #fff;
+}
+
+.card .btn-primary:hover {
+  background: linear-gradient(to right, #88a378, #5b8050);
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* ... Seus estilos existentes ... */
+
+.header-icon .bi {
+    color: #333; /* Cor inicial dos ícones */
+    transition: color 0.3s; /* Transição suave para a mudança de cor */
+  }
+  
+  .header-icon.scrolled .bi{
+    color: #5b8050; /* Cor desejada dos ícones quando a página é rolada */
+  }
+  
+  /* ... Seus estilos existentes ... */
+  
+  
+  header.scrolled {
+    background: #93a97c; /* Cor de fundo após rolar */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra após rolar */
+  }
+  
+  header.scrolled .navbar a,
+  header.scrolled .header-icon i {
+    color: #fff; /* Cor dos links e ícones após rolar */
+  }
+  
+
+
+
+body{
+    color: var(--text-color);
+    background-color: #F6E7CB;
+}
+section{
+    padding: -20px 5%;
+}
+
+img{
+    width: 100%;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 100px;
+    background: transparent; /* Header inicialmente transparente */
+    transition: background 0.3s ease-in-out;
+  }
+.logo img{
+    width: 100px;
+}
+.navbar{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Defina a altura para ocupar a altura total do header */
+    margin: 0; /* Remova a margem padrão */
+    padding: 0; /* Remova o preenchimento padrão */
+}
+
+.navbar a{
+    
+    padding: 8px 17px;
+    color: var(--bg-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+
+}
+.navbar a:hover{
+    text-decoration: none;
+    background: #4b504d;
+    border-radius: 0.2rem;
+    transition: 0.2s all linear;
+
+}
+
+.navbar li a.selected {
+    color: #e4e4e4; /* Cor de destaque para o link selecionado */
+    font-weight: bold; /* Pode adicionar negrito para destacar ainda mais */
+    /* Outros estilos de destaque, como sublinhado ou fundo, se desejado */
+  }
+  
+  
+
+/* Estilo padrão dos links no navbar */
+.navbar li a {
+    font-weight: bold;
+    position: relative; /* Para posicionamento do elemento ::before */
+    color: #5b8050; /* Cor do texto não selecionado */
+    text-decoration: none; /* Remova a sublinhado padrão */
+    padding: 10px; /* Espaçamento interno */
+    transition: color 0.3s; /* Transição suave para a mudança de cor */
+  }
+  
+  /* Efeito de linha colorida em cima dos links */
+  .navbar li a::before {
+    content: ""; /* Adiciona um elemento vazio para a linha */
+    position: absolute; /* Define posição absoluta em relação ao link */
+    top: 0; /* Posiciona a linha no topo do link */
+    left: 0; /* Posiciona a linha no início do link */
+    width: 100%; /* Largura total do link */
+    height: 2px; /* Altura da linha */
+    transform: scaleX(0); /* Inicialmente, a linha está invisível */
+    transform-origin: 0 0; /* Origem da transformação no canto superior esquerdo */
+    transition: transform 0.3s; /* Transição suave para a expansão da linha */
+  }
+  
+  /* Efeito de expansão da linha colorida ao passar o mouse sobre os links */
+  .navbar li a:hover::before {
+    transform: scaleX(1); /* Expandir a linha para a largura completa do link */
+  }
+  
+
+
+.header-icon{
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    column-gap: 0.8rem;
+}
+.header-icon .bi {
+color: var(--text-color);    
+}
+.header-icon .bi:hover {
+    color: #5d8d4f;    
+    }
+#menu-icon{
+    color: var(--bg-color);
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilo do elemento de sobreposição */
+.content .content-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%; /* Isso garante que a imagem não ultrapasse a largura do contêiner pai */
+    max-height: 100%; /* Isso garante que a imagem não ultrapasse a altura da tela (viewport) */
+    background: url('Artboard_74_novo-removebg-preview.png'); /* Use a imagem de textura */
+    background-size: cover; /* Ajuste o tamanho da imagem para cobrir a sobreposição */
+    opacity: 0.7; /* Ajuste a opacidade conforme necessário */
+    z-index: -1;
+  }
+  
+  /* Estilo da imagem */
+  .content .content-right img {
+    width: 100%;
+    display: block;
+  }
+
+  
+
+
+
+.grid {
+    margin-left:6%;
+    margin-top: 100px; /* Adicione a margem superior desejada */
+  }
+.content{
+    display: grid;
+    grid-template-columns: 50% auto;
+    gap:30px;
+    margin-top: 150px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.content .content-left .info {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content .content-left .info h2{
+    font-size: 60px;
+    font-family: 'Poppins';
+    margin-bottom: 30px;
+  font-weight: bold ; /* Adicione negrito para tornar a fonte mais grossa */
+  color: #ebebeb;
+
+}
+.content .content-left .info p{
+    font-size: 23px;
+    line-height: 2pc;
+    margin-bottom: 30px;
+    font-family: 'Poppins';
+}
+
+/*button*/
+
+.content .content-left button{
+    padding: 10px 23px;
+    background-color: #5b8050;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.content .content-right{
+    display: block;
+    width: 100%;
+}
+
+@keyframes rotateImage {
+    frm {
+      transform: rotate(0deg); /* Ângulo inicial (0 graus) */
+    }
+    t {
+      transform: rotate(360deg); /* Ângulo final (360 graus, uma rotação completa) */
+    }
+  }
+  
+  .content-right img {
+    animation: rotateImage 5s linear infinite; /* Animação de rotação contínua por 5 segundos */
+  }
+  
+
+  /* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .navbar a {
+        padding: 8px 10px;
+    }
+
+    .header-icon {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li {
+        margin-bottom: 10px;
+    }
+}
